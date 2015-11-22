@@ -1,0 +1,188 @@
+\documentclass[a4paper]{article}
+\usepackage{array}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amssymb}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfgantt}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[margin=1 in]{geometry}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{epsfig}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\usepackage{listings}
+\lstset{
+	language=,
+	literate=
+		{æ}{{\ae}}1
+		{ø}{{\o}}1
+		{å}{{\aa}}1
+		{Æ}{{\AE}}1
+		{Ø}{{\O}}1
+		{Å}{{\AA}}1,
+	backgroundcolor=\color{listinggray},
+	tabsize=3,
+	rulecolor=,
+	basicstyle=\scriptsize,
+	upquote=true,
+	aboveskip={0.2\baselineskip},
+	columns=fixed,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,
+	prebreak =\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	frame=single,
+	showtabs=false,
+	showspaces=false,
+	showlines=true,
+	showstringspaces=false,
+	identifierstyle=\ttfamily,
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+  moredelim=**[is][\color{blue}]{@}{@},
+}
+
+\lstdefinestyle{base}{
+  emptylines=1,
+  breaklines=true,
+  basicstyle=\ttfamily\color{black},
+}
+
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33}
+\def\sfm*{\texttt{scan\_for\_matches}}
+\def\E{\mathbb{E}}
+\def\V{\mathbb{V}ar}
+\def\P{\mathbb{P}}
+\def\H{\mathcal{H}}
+\def\qvec#1#2{\begin{bmatrix} #1 \\ #2 \end{bmatrix}}
+\makeatletter
+\renewcommand{\ALG@beginalgorithmic}{\footnotesize}
+\makeatother
+\usetikzlibrary{shapes}
+\title{Data Analysis 2014-2015\\ Home Assignment 4}
+\author{Tobias Hallundbæk Petersen - xtv657}
+\begin{document}
+\maketitle
+\newpage
+\section{Classification}
+
+\section{Probability theory refreshment}
+We han an urn that contains five red, three orange, and one blue ball. We now select two balls at random
+\begin{enumerate}
+  \item \textbf{What is the sample space of this experiment}\\
+    $\{\{R,R\},\{R,O\},\{R,B\},\{O,O\},\{O,R\},\{O,B\},\{B,R\},\{B,O\}\}$
+  \item \textbf{What is the probability of each point in the sample space}\\
+    If we use the same ordering as above, $\{5/18,5/24,5/72,1/12,5/24,1/24,5/72,1/24\}$, the sum of these probabilities sum up to one, meaning that we have a complete sample space.
+  \item \textbf{Let $X$ represent the number of orange balls selected. What are the possible values of $X$?}\\
+    The possible values of $X$ are $\{0,1,2\}.$
+  \item \textbf{Calculate $\P\{X=0\}$}\\
+    $5/18 + 5/72 + 5/72 = 5/12$
+  \item \textbf{Calculate $\E[X]$}\\
+    $5/24 + 1/12 \cdot 2 + 5/24 + 1/24 + 1/24 = 2/3$
+\end{enumerate}
+\section{Probability theory refreshment}
+From probability theory we have the following definitions and properties:
+\begin{align*}
+(a) &\ p_X(x)=\sum_{y\in \mathcal{Y}}p_{XY}(x,y) \\
+(b) &\ \mbox{If $X$ and $Y$ are independent, then $P_{XY}(x,y)=p_X(x)p_Y(y)$} \\
+(c) &\ \mathbb{E}[X]=\sum_{x\in \mathcal{X}}xp_X(x)
+\end{align*}
+$X$ and $Y$ are discrete random variables that take values from in $\mathcal{X}$ and $\mathcal{Y}$. $p_X$ is the distribution of $X$, $p_Y$ the distribution of $Y$ and $p_{XY}$ the distribution of $X$ and $Y$.
+
+\subsection*{1.}
+We prove the following identity:
+\begin{align*}
+\mathbb{E}[X+Y]=\mathbb{E}[X]+\mathbb{E}[Y]
+\end{align*}
+By (c), the expected value of $X$ is given by:
+$$\mathbb{E}[X]=\sum_{x\in \mathcal{X}}xp_X(x)$$
+Therefore the expected value of $X+Y$ would be
+\begin{align*}
+\mathbb{E}[X+Y] &=\sum_{x\in \mathcal{X}}\sum_{y\in \mathcal{Y}} (x+y)p_{XY}(x,y) \\
+                &= \sum_{x\in \mathcal{X}}x\sum_{y\in \mathcal{Y}} p_{XY}(x,y)+ \sum_{y\in \mathcal{Y}}y\sum_{\in \mathcal{X}} p_{XY}(x,y) \\
+                &= \sum_{x\in \mathcal{X}}xp(x)+\sum_{y\in \mathcal{Y}}yp(y) \\ 
+                &= \mathbb{E}[X]+\mathbb{E}[Y]
+\end{align*}
+In the last step we use the definition for the expected value of a random variable. We have now shown that $\mathbb{E}[X+Y]=\mathbb{E}[X]+\mathbb{E}[Y]$.
+\subsection*{2.}
+To prove the following identity, we use that the random variables $X$ and $Y$ are independent.
+\begin{align*}
+\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]
+\end{align*}
+We can write $\mathbb{E}[XY]$ as
+\begin{align*}
+\mathbb{E}[XY]           &= \sum_{x\in \mathcal{X}}\sum_{y\in \mathcal{Y}} xy p_{XY}(x,y)\\
+\end{align*}
+This is where we use that $X$ and $Y$ are independent - using property (b):
+\begin{align*}
+\sum_{x\in \mathcal{X}}\sum_{y\in \mathcal{Y}} xyp_{X}(x)p_{Y}(y)
+\end{align*}
+This can be reduced to prove our identity
+\begin{align*}
+\sum_{x\in \mathcal{X}}\sum_{y\in \mathcal{Y}} xyp_{X}(x)p_{Y}(y) &= \sum_{x\in \mathcal{X}}xp_{X}(x)\sum_{y\in \mathcal{Y}} yp_{Y}(y) \\
+&= \mathbb{E}[X]\mathbb{E}[Y]
+\end{align*}
+This proves the identity $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$.
+
+\subsection*{3.}
+A bag has $2$ red apples and $2$ green apples. There is taken $2$ apples from the bag without putting them back into the bag. Let $X$ be the first apple and let $Y$ be the second apple. The joint distribution table of $X$ and $Y$ is seen below:
+\begin{center}
+\begin{tabular}{|c||c|c|}
+\hline
+X / Y & Red & Green \\
+\hline
+\hline
+Red & $\frac{1}{6}$  & $\frac{2}{6}$ \\
+\hline
+Green & $\frac{2}{6}$ & $\frac{1}{6}$\\
+\hline
+\end{tabular}
+\end{center}
+The probability of apple $X$ being red is:
+\begin{align*}
+\mathbb{E}[X=\mbox{Red}] = \frac{1}{2}
+\end{align*}
+Which is the same probability for apple $Y$ being red. We have that
+\begin{align*}
+\mathbb{E}[X=\mbox{Red} \land Y=\mbox{Red}]=\frac{1}{6}
+\end{align*}
+Since $\frac{1}{2}\frac{1}{2} = \frac{1}{4}\neq\frac{1}{6}$ then
+\begin{align*}
+\mathbb{E}[XY]\neq \mathbb{E}[X]\mathbb{E}[Y]
+\end{align*}
+in this example.
+
+\subsection*{4.}
+The identity to be proved:
+\begin{align*}
+\mathbb{E}[\mathbb{E}[X]]=\mathbb{E}[X]
+\end{align*}
+We know that $\mathbb{E}[X]=k$ and that $\mathbb{E}[k]=k$. That means taking the expected value of an expected value will just return the constant you already found. This can be done more than $2$ times and it will always be the constant $k$ that is your result.
+
+\subsection*{5.}
+We want to show that $\E[(X-\E[X])^2] = \E[X^2]-(\E[X])^2.$
+\begin{align*}
+  \E[(X-\E[X])^2] &= \E[X^2 - 2\cdot X \cdot \E[X]+ (\E[X])^2]\\
+                  &= \E[X^2] - 2\cdot \E[X] \cdot \E[X] + (\E[X])^2\\
+                  &= \E[X^2]-(\E[X])^2
+\end{align*}
+\section{Markov's inequality vs. Hoeffding's inequality vs. binomial bound}
+
+\section{Hoeffding's inequality}
+
+\end{document}
