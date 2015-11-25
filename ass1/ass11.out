@@ -1,5 +1,8 @@
 \BOOKMARK [1][-]{section.1}{Classification}{}% 1
-\BOOKMARK [1][-]{section.2}{Probability theory refreshment}{}% 2
-\BOOKMARK [1][-]{section.3}{Probability theory refreshment}{}% 3
-\BOOKMARK [1][-]{section.4}{Markov's inequality vs. Hoeffding's inequality vs. binomial bound}{}% 4
-\BOOKMARK [1][-]{section.5}{Hoeffding's inequality}{}% 5
+\BOOKMARK [2][-]{subsection.1.1}{Nearest neighbor}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Hyperparameter selection using cross-validation}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Data Normalization}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Probability theory refreshment}{}% 5
+\BOOKMARK [1][-]{section.3}{Probability theory refreshment}{}% 6
+\BOOKMARK [1][-]{section.4}{Markov's inequality vs. Hoeffding's inequality vs. binomial bound}{}% 7
+\BOOKMARK [1][-]{section.5}{Hoeffding's inequality}{}% 8

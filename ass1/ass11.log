@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.1)  20 NOV 2015 16:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.1)  23 NOV 2015 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,7 +1378,19 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 84.
+ (./ass1.py)
+<./12.pdf, id=40, 219.71465pt x 167.29753pt>
+File: ./12.pdf Graphic file (type pdf)
+ <use ./12.pdf>
+Package pdftex.def Info: ./12.pdf used on input line 97.
+(pdftex.def)             Requested size: 317.07614pt x 241.45964pt.
+ [1
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
@@ -1388,40 +1400,44 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
+(./ass1.py) [2 <./12.pdf>] [3] [4] [5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (./ass11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `ass11.out' has not changed.
-(rerunfilecheck)             Checksum: 0104010FDBF0473166FF53DCE27445A6;336.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
+(rerunfilecheck)             Checksum: 8E7C00E3C3DA504A37B87A7DF05A0A1A;564.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 25443 strings out of 494465
- 479093 string characters out of 6166417
- 605373 words of memory out of 5000000
- 28208 multiletter control sequences out of 15000+600000
- 11503 words of font info for 45 fonts, out of 8000000 for 9000
+ 26060 strings out of 494465
+ 485258 string characters out of 6166417
+ 728868 words of memory out of 5000000
+ 28732 multiletter control sequences out of 15000+600000
+ 11839 words of font info for 47 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 62i,10n,67p,443b,337s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,10n,75p,443b,1360s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
-10.pfb>
-Output written on ass11.pdf (4 pages, 131867 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ass11.pdf (6 pages, 201941 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
